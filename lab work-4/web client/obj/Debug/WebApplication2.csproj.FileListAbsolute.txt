@@ -1,0 +1,5 @@
+\\kc.umkc.edu\kc-users\home\v\vv387\my documents\visual studio 2010\Projects\WebApplication2\WebApplication2\bin\WebApplication2.dll
+\\kc.umkc.edu\kc-users\home\v\vv387\my documents\visual studio 2010\Projects\WebApplication2\WebApplication2\bin\WebApplication2.pdb
+\\kc.umkc.edu\kc-users\home\v\vv387\my documents\visual studio 2010\Projects\WebApplication2\WebApplication2\obj\Debug\ResolveAssemblyReference.cache
+\\kc.umkc.edu\kc-users\home\v\vv387\my documents\visual studio 2010\Projects\WebApplication2\WebApplication2\obj\Debug\WebApplication2.dll
+\\kc.umkc.edu\kc-users\home\v\vv387\my documents\visual studio 2010\Projects\WebApplication2\WebApplication2\obj\Debug\WebApplication2.pdb
