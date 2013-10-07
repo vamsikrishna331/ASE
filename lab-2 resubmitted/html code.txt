@@ -58,7 +58,7 @@
     <a href="#start" data-icon="start">start</a>
     </header>
         <body onload="initialize()">
-<div id="map-canvas" style="height: 40000px; width: 40000px"></div>  
+<div id="map-canvas" style="height: 4000px; width: 40000px"></div>  
         </body>
 </div> 
 
