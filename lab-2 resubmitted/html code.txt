@@ -1,4 +1,4 @@
-<title>list of items</title>
+<title>List of items</title>
 <script  src="http://maps.googleapis.com/maps/api/js?sensor=true"></script>
 
 <div data-role="page" id="start">
