@@ -1,0 +1,39 @@
+#map_canvas {
+          top:90px; left:0px; position:absolute; background-color:white; padding: 0px; border:1px solid black;
+				z-index: 1;
+      }
+#map_select {
+          top:0px; left:25px; position:absolute; background-color:white; padding: 5px;
+				z-index: 1000;
+      }
+#all {
+                        position: absolute;
+		right:         0px;
+		top:           100px; 
+		//width:       15%;
+		height:       83%; 
+		//border: 1px solid #808080;
+		overflow: auto;
+	}
+	
+	#all h1 {
+		font-family: arial;
+		font-size:12px;
+		padding-top:2px; padding-left:17px;
+	}
+
+	#all h2 {
+		font-family:arial,sans-serif;
+		font-size:12px;
+		font-weight:normal;
+                padding-left:100px;
+	}
+
+		#all h2 a:link {
+			color: #383D5B;
+		}
+				#all h2 a:hover {
+			color: #000000;
+		}	
+
+</style>
