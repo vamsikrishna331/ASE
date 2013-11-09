@@ -1,0 +1,48 @@
+import java.sql.*;
+import java.io.*;
+import javax.servlet.*;
+import javax.servlet.http.*;
+
+public class InsertImage extends HttpServlet{
+public void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException{
+String ad=getServletContext().getRealPath("/");
+ad=ad+"\\Pictures";
+int ii=0;
+System.out.println("....."+ad+"\\Picture");
+String s1=request.getParameter("file");
+String s11=request.getParameter("name");
+String s12=request.getParameter("audio");
+PrintWriter pw = response.getWriter();
+String connectionURL = "jdbc:mysql://localhost:3306/online";
+Connection con=null;
+try{
+Class.forName("com.mysql.jdbc.Driver").newInstance();
+con = DriverManager.getConnection(connectionURL, "root", "root");
+Statement st=con.createStatement();
+ResultSet rs=st.executeQuery("select max(id) from view");
+if(rs.next())
+{
+	ii=rs.getInt(1);
+}
+ii++;
+System.out.println("....."+ii);
+PreparedStatement ps = con.prepareStatement("INSERT INTO view VALUES(?,?,?,?)");
+System.out.println("....."+s1);
+File file = new File(ad, s1);
+FileInputStream fs = new FileInputStream(file);
+ps.setInt(1,ii);
+ps.setString(2,s11);
+ps.setBinaryStream(3,fs,fs.available());
+ps.setString(4,s12);
+int i = ps.executeUpdate();
+if(i!=0){
+pw.println("image inserted successfully");
+response.sendRedirect("admin_home.jsp?Success");
+}else{
+pw.println("problem in image insertion");
+}
+} catch (Exception e){
+System.out.println(e);
+}
+}
+}
