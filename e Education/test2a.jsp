@@ -8,7 +8,7 @@ Vector v=new Vector();
 String u=(String)session.getAttribute("u");
 System.out.println(u);
 Vector s=new Vector();
-Vector vv=new Vector();
+
 s.add(request.getParameter("1"));
 s.add(request.getParameter("2"));
 s.add(request.getParameter("3"));
@@ -20,10 +20,11 @@ s.add(request.getParameter("8"));
 s.add(request.getParameter("9"));
 s.add(request.getParameter("10"));
 
+
 Connection con1 = databasecon.getconnection();
 Statement st1 = con1.createStatement();
 
-ResultSet rs=st1.executeQuery("select ans from test1" );
+ResultSet rs=st1.executeQuery("select ans from test2" );
 while(rs.next())
 {
 	v.add(rs.getString(1));	
@@ -34,24 +35,19 @@ for(int i=0;i<10;i++)
 {
 	t1=(String)s.get(i);
 	t2=(String)v.get(i);
-
+	
 	System.out.println("i="+i+"  "+t1.equals(t2));
 	
-	if(t1.equals(t2))
+	if(t1.equalsIgnoreCase(t2))
 	{
 		count++;
-	}
-	else if(!t1.equals(t2))
-	{
-		vv.add(t1);
 	}
 }
 	
 
-session.setAttribute("qns",vv);
 System.out.println(count);
 session.setAttribute("count",count);
-response.sendRedirect("succ.jsp");
+response.sendRedirect("succ1.jsp");
 
 %>
 

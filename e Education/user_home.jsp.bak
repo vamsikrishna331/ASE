@@ -3,7 +3,13 @@
 <%@ page import="java.sql.*" import="databaseconnection.databasecon"  %>
 <%
 
+int ses=(Integer)session.getAttribute("i");
+String u=(String)session.getAttribute("u");
+System.out.println(ses);
+Connection con1 = databasecon.getconnection();
+	Statement st1 = con1.createStatement();
 
+int ii=st1.executeUpdate("update register set session="+ses+" where un='"+u+"' " );
 %>
 <%!
 public int nullIntconv(String str)
@@ -163,28 +169,7 @@ System.out.println(sql1);
         {
           if(i==((iPageNo/iShowRows)+1))
           {
-			  
-
-
-if(i==4){
-int ses=(Integer)session.getAttribute("i");
-String u=(String)session.getAttribute("u");
-System.out.println(ses);
-Connection con1 = databasecon.getconnection();
-Statement st1 = con1.createStatement();
-int ii=st1.executeUpdate("update register set session="+ses+" where un='"+u+"' " );
-}
-
-
-
-
-
-
-
-
-
-
-
+			  ....	
           %>
            <a href="user_home.jsp?iPageNo=<%=i%>" style="cursor:pointer;color: red"><b><font size=4><%=i%>&nbsp;&nbsp;</b></a>
           <%

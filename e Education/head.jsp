@@ -14,8 +14,8 @@ This is a free CSS template provided by templatemo.com
 <div id="templatemo_container_wrapper">
 	<div class="templatemo_spacer"></div>
 <div id="templatemo_container">
-<div id="templatemo_top"> <a href="user_home.jsp" target="_parent">Home</a>&nbsp;&nbsp;|&nbsp;&nbsp;<a href="index.jsp" target="_parent">Logout</a>
-</div>
+
+  
   <div id="templatemo_header">
       <div id="inner_header"><br><br>
         <div>

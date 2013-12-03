@@ -152,7 +152,7 @@
           </div>
 		  </td><td>
           <div class="city-wrap">
-            <input type="text" pattern="[0-9]*" maxlength="5" required name="zip" id="zip" onkeypress = "return isNumber(this.value);">
+            <input type="text" pattern="[0-9]*" maxlength="5" required name="zip" id="zip">
             <label for="zip">Zip</label>
             <p class="zip-error">Not a real zip code.</p>
           </div>
@@ -185,14 +185,6 @@ function validate(email) {
                 return (false);
             }
  }
-function isNumber(evt) {
-    evt = (evt) ? evt : window.event;
-    var charCode = (evt.which) ? evt.which : evt.keyCode;
-    if (charCode > 31 && (charCode < 48 || charCode > 57)) {
-        return false;
-    }
-    return true;
 
-}
 </script>
 <%@ include file="footer.jsp"%>

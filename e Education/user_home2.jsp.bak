@@ -4,7 +4,7 @@
 <script>alert("Redirecting to Test 1.");</script>
 <%@ page import="java.sql.*" import="databaseconnection.databasecon"  %>
 <%
-
+Thread.sleep(5000);
 
 int ses=(Integer)session.getAttribute("i");
 String u=(String)session.getAttribute("u");

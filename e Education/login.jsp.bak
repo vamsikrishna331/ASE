@@ -2,8 +2,8 @@
 <%
 String pass=null,uid=null;
 
-//String a = request.getParameter("uid");
-//String b = request.getParameter("pass");
+String a = request.getParameter("uid");
+String b = request.getParameter("pass");
 String m = request.getParameter("m");
 
 String[] data=m.split(",");

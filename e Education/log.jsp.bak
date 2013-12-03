@@ -1,0 +1,20 @@
+<%@ include file="header.jsp"%>
+<%@ page  import="java.sql.*" import="databaseconnection.*" import="javax.swing.JOptionPane"%>
+<%
+
+
+String uid = request.getParameter("uid");
+String pass= request.getParameter("pass");
+%>
+<center>
+<table cellspacing=20>
+<form method="post" action="login.jsp">
+	
+
+
+<tr><td><input type="hidden" name="uid" value="<%=uid%>"><input type="hidden" name="uid" value="<%=pass%>"><input type="submit" value="Beginer"> 
+<tr><td><input type="submit" value="mm"> <tr><td><input type="submit" value="dd"> 
+
+</table>
+</form>
+<%@ include file="footer.jsp"%>

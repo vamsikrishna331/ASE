@@ -4,7 +4,7 @@
 
 
 
-<%! String name, lname, addr, city, state, zip, tele, email, un, pwd,st1,st2;
+<%! String name, lname, addr, city, state, zip, tele, email, un, pwd;
 	int i=0;
 %>
 <%

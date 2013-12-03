@@ -5,6 +5,9 @@
 String u=(String)session.getAttribute("u");
 
 int count=(Integer)session.getAttribute("count");
+Vector vv=(Vector)session.getAttribute("qns");
+
+System.out.println("..."+vv.size()+".."+vv.get(2));
 
 %>
 <h2><font color=#990000>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Your Score <font color=red><%=count%>/10

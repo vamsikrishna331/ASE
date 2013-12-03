@@ -1,7 +1,10 @@
-<%@ include file="head.jsp"%>
-
 <!DOCTYPE html>
+<html>
 
+<head>
+  <meta charset='UTF-8'>
+  
+  <title>Using Ziptastic</title>
   
   <link rel='stylesheet' href='css/style.css'>
 
@@ -78,7 +81,7 @@
   </script>
 </head>
 
-
+<body>
 
   <div class="stripe">	
     <div class="inner">
@@ -86,46 +89,14 @@
   </div>
 
   <div id="page-wrap">
-     <%
-                                                       String id=request.getParameter("id");
-                                                       if(id!=null )
-                                                       {
-                                                               out.println("<font color='red'><blink>Registration Success ! <br><br> <font color=#990066 size=4>Your User Id:: <font color=#009900>"+id+" </blink></font><br><br> <a href=index.jsp>Login Here</a>");
-                                                       }
-													   else {%>
-												<img src="images/download.jpg" width="225" height="224" border="0" alt="">
-                                               <%}%>
-    <form action="register1.jsp" method="post" class="fancy-form">
+    
+    <form action="#" method="post" class="fancy-form">
 
       <fieldset>
-        <legend>Registration</legend>
-        <p class="instructions"></p><br>
-
-
-		 <div>
-            <input type="text" name="name" id="address-line-1">
-            <label for="address">Name</label>
-          </div><br>
-		   <div>
-            <input type="text" name="lname" id="address-line-1">
-            <label for="address">Last Name</label>
-          </div><br> <div>
-            <input type="text" name="tele" id="address-line-1">
-            <label for="address">Mobile</label>
-          </div> <br><div>
-            <input type="text" name="email" id="address-line-1" onblur = "return validate(this.value);">
-            <label for="address">Email</label>
-          </div><br>
-		 <div>
-            <input type="text" name="pwd" id="address-line-1">
-            <label for="address">Password</label>
-          </div><br>
-
-
-
-
+        <legend>Address</legend>
+        <p class="instructions">Start by entering your zip code.</p>
         <div>
-		          <div>
+          <div>
             <input type="text" name="address-line-1" id="address-line-1">
             <label for="address-line-1">Street #1</label>
           </div>
@@ -136,35 +107,26 @@
             <label for="address-line-2">Street #2</label>
           </div>
         </div>
-		<table>
-		<tr>
-		
         <div>
-		<td>
           <div class="city-wrap">
             <input type="text" name="city" id="city">
             <label for="city">City</label>
-          </div></td>
-			<td>
-		  <div class="city-wrap">
+          </div>
+          <div class="state-wrap">
             <input type="text" name="state" id="state">
             <label for="state">State</label>
           </div>
-		  </td><td>
-          <div class="city-wrap">
-            <input type="text" pattern="[0-9]*" maxlength="5" required name="zip" id="zip" onkeypress = "return isNumber(this.value);">
+          <div class="zip-wrap">
+            <input type="text" pattern="[0-9]*" maxlength="5" required name="zip" id="zip">
             <label for="zip">Zip</label>
             <p class="zip-error">Not a real zip code.</p>
           </div>
-		  </td>
         </div>
-		</tr>
-		</table>
 
         <div class="submit-wrap">
-
-        </div>
           <input type="submit" value="Submit">
+        </div>
+
       </fieldset>
 
     </form> 
@@ -174,25 +136,3 @@
 </body>
 
 </html>
-<script type="text/javascript">
-function validate(email) {
-
-            var reg = /^([A-Za-z0-9_\-\.])+\@([A-Za-z0-9_\-\.])+\.([A-Za-z]{2,4})$/;
-            //var address = document.getElementById[email].value;
-            if (reg.test(email) == false) 
-            {
-                alert('Invalid Email Address');
-                return (false);
-            }
- }
-function isNumber(evt) {
-    evt = (evt) ? evt : window.event;
-    var charCode = (evt.which) ? evt.which : evt.keyCode;
-    if (charCode > 31 && (charCode < 48 || charCode > 57)) {
-        return false;
-    }
-    return true;
-
-}
-</script>
-<%@ include file="footer.jsp"%>

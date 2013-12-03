@@ -6,10 +6,10 @@
 
 <table align="center">
 <tr><td><a href="addData.jsp"><h2>Add Content</a>
-<tr><td><a href="level1.jsp"><h2>Level-1 Test</a>
+
 </table>
 	
-	
+	<br><br><br><br><br><br>
 
 <%@ include file="footer.jsp"%>
 
